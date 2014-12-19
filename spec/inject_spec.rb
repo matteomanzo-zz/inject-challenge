@@ -18,6 +18,17 @@ describe Array do
       expect([1, 2, 3, 4].inject{|memo, num| memo * num}).to eq 24
       expect([1, 2, 3, 4].matt_inject{|memo, num| memo * num}).to eq 24
     end
-
   end
+
+
+
+  context 'with a symbol' do 
+
+    it 'can add numbers together' do
+      expect([1, 2, 3, 4].inject(:+)).to eq 10
+      expect([1, 2, 3, 4].matt_inject(:+)).to eq 10
+    end
+  
+  end
+
 end

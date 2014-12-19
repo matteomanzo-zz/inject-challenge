@@ -10,8 +10,8 @@ describe Array do
     end
 
     it 'can minus numbers'do
-
+      expect([1, 2, 3, 4].inject{|memo, num| memo - num}).to eq -8
+      expect([1, 2, 3, 4].matt_inject{|memo, num| memo - num}).to eq -8
     end
-
   end
 end

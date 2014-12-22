@@ -35,10 +35,16 @@ describe Array do
       expect([1, 2, 3, 4].matt_inject(:+)).to eq 10
     end
 
-    it 'can multiply numbers together' do
+    it 'can multiply number together' do
       expect([1, 2, 3, 4].inject(:*)).to eq 24
       expect([1, 2, 3, 4].matt_inject(:*)).to eq 24
     end
   end
 
+  context 'with a symbol argument' do
+
+    it 'can add with a starting point and a symbol' do
+      expect([1, 2, 3, 4].inject(10, :+)).to eq 20
+    end
+  end
 end

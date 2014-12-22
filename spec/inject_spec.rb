@@ -30,11 +30,10 @@ describe Array do
 
   context 'with a symbol' do 
 
-    xit 'can add numbers together' do
+    it 'can add numbers together' do
       expect([1, 2, 3, 4].inject(:+)).to eq 10
       expect([1, 2, 3, 4].matt_inject(:+)).to eq 10
     end
-  
   end
 
 end

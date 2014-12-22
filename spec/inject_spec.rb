@@ -34,6 +34,11 @@ describe Array do
       expect([1, 2, 3, 4].inject(:+)).to eq 10
       expect([1, 2, 3, 4].matt_inject(:+)).to eq 10
     end
+
+    it 'can multiply numbers together' do
+      expect([1, 2, 3, 4].inject(:*)).to eq 24
+      expect([1, 2, 3, 4].matt_inject(:*)).to eq 24
+    end
   end
 
 end

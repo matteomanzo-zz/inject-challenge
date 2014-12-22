@@ -20,11 +20,17 @@ describe Array do
     end
   end
 
+  context 'with an argument and block' do
 
+    it 'can add numbers with a starting point' do
+      expect([1, 2, 3, 4].inject(10){|memo, num| memo + num}).to eq 20
+      expect([1, 2, 3, 4].matt_inject(10){|memo, num| memo + num}).to eq 20
+    end
+  end
 
   context 'with a symbol' do 
 
-    it 'can add numbers together' do
+    xit 'can add numbers together' do
       expect([1, 2, 3, 4].inject(:+)).to eq 10
       expect([1, 2, 3, 4].matt_inject(:+)).to eq 10
     end

@@ -47,5 +47,10 @@ describe Array do
       expect([1, 2, 3, 4].inject(10, :+)).to eq 20
       expect([1, 2, 3, 4].matt_inject(10, :+)).to eq 20
     end
+
+    it 'can add with a starting point and a symbol' do
+      expect([1, 2, 3, 4].inject(10, :*)).to eq 240
+      expect([1, 2, 3, 4].matt_inject(10, :*)).to eq 240
+    end
   end
 end
